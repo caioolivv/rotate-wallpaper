@@ -9,8 +9,8 @@ DISTRO=$(echo $DISTRO | tr '[:upper:]' '[:lower:]')
 
 case "$DISTRO" in
   "ubuntu")
-    sudo apt install imagemagick
-    sudo apt install systemd-container
+    sudo apt update
+    sudo apt install imagemagick systemd-container
     ;;
   "fedora")
     sudo dnf install ImageMagick
@@ -35,7 +35,7 @@ mkdir $HOME/.config/$NAME
 DATA_DIR=$HOME/.local/share/$NAME
 CONFIG_DIR=$HOME/.config/$NAME
 
-for wallpaper in $WALLPAPER_DIR; do
+for wallpaper in $WALLPAPER_DIR/*; do
   cp $wallpaper $DATA_DIR/plain
   convert $wallpaper -filter Gaussian -blur 0x$blur_radius $DATA_DIR/blurred/$wallpaper
 done
