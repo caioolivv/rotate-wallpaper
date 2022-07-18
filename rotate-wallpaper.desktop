@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Rotate Wallpaper
+Exec=$HOME/.local/share/rotate-wallpaper/bin/wallpaper_desktop.sh
+X-GNOME-Autostart-enabled=true
+Hidden=false

@@ -1,0 +1,10 @@
+[Unit]
+Description=Chooses new wallpaper and changes GDM background before shutdown
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStop=$HOME/.local/share/rotate-wallpaper/bin/wallpaper_shutdown.sh
+
+[Install]
+WantedBy=multi-user.target
