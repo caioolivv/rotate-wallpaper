@@ -41,11 +41,11 @@ for wallpaper in $WALLPAPER_DIR/*; do
   convert $wallpaper -filter Gaussian -blur 0x$blur_radius $DATA_DIR/blurred/"${wallpaper##*/}"
 done
 
-sed -i "s|$HOME|${HOME}|g" wallpaper_desktop.sh
-sed -i "s|$HOME|${HOME}|g" wallpaper_shutdown.sh
-sed -i "s|$DISTRO|${DISTRO}|g" wallpaper_shutdown.sh
-sed -i "s|$HOME|${HOME}|g" rotate-wallpaper.service
-sed -i "s|$HOME|${HOME}|g" rotate-wallpaper.desktop
+sed -i "s|\$HOME|${HOME}|g" wallpaper_desktop.sh
+sed -i "s|\$HOME|${HOME}|g" wallpaper_shutdown.sh
+sed -i "s|\$DISTRO|${DISTRO}|g" wallpaper_shutdown.sh
+sed -i "s|\$HOME|${HOME}|g" rotate-wallpaper.service
+sed -i "s|\$HOME|${HOME}|g" rotate-wallpaper.desktop
 
 cp wallpaper_desktop.sh $DATA_DIR/bin
 cp wallpaper_shutdown.sh $DATA_DIR/bin
