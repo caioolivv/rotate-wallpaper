@@ -8,11 +8,11 @@ DISTRO="${DISTRO##*:}"
 DISTRO=$(echo $DISTRO | tr '[:upper:]' '[:lower:]')
 
 case "$distro" in
-  ubuntu)
+  "ubuntu")
     sudo apt install imagemagick
     sudo apt install systemd-container
     ;;
-  fedora)
+  "fedora")
     sudo dnf install ImageMagick
     sudo dnf copr enable zirix/gdm-wallpaper
     sudo dnf install gdm-wallpaper
