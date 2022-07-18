@@ -1,1 +1,1 @@
-# wallpaper-at-boot
+# rotate-wallpaper
