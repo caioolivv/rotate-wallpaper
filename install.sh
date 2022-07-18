@@ -7,7 +7,7 @@ DISTRO=$(lsb_release -a | grep -o 'Distributor ID:[^ ,]\+')
 DISTRO="${DISTRO##*:}"
 DISTRO=$(echo $DISTRO | tr '[:upper:]' '[:lower:]')
 
-case "$distro" in
+case "$DISTRO" in
   "ubuntu")
     sudo apt install imagemagick
     sudo apt install systemd-container
@@ -22,7 +22,7 @@ case "$distro" in
     ;;
 esac
 
-WALLPAPER_DIR=$HOME/Pictures/Wallpaper
+WALLPAPER_DIR=$HOME/Pictures/Wallpapers
 NAME="rotate-wallpaper"
 blur_radius='30'
 
