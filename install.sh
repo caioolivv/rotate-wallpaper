@@ -37,7 +37,8 @@ CONFIG_DIR=$HOME/.config/$NAME
 
 for wallpaper in $WALLPAPER_DIR/*; do
   cp $wallpaper $DATA_DIR/plain
-  convert $wallpaper -filter Gaussian -blur 0x$blur_radius $DATA_DIR/blurred/$wallpaper
+
+  convert $wallpaper -filter Gaussian -blur 0x$blur_radius $DATA_DIR/blurred/"${wallpaper##*/}"
 done
 
 sed -i "s|$HOME|${HOME}|g" wallpaper_desktop.sh
