@@ -50,6 +50,7 @@ sed -i "s|\$HOME|${HOME}|g" rotate-wallpaper.desktop
 cp wallpaper_desktop.sh $DATA_DIR/bin
 cp wallpaper_shutdown.sh $DATA_DIR/bin
 sudo cp rotate-wallpaper.service /etc/systemd/system/
+mkdir $HOME/.config/autostart
 cp rotate-wallpaper.desktop $HOME/.config/autostart
 
 sudo systemctl enable rotate-wallpaper.service
